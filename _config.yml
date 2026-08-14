@@ -1,0 +1,14 @@
+title: SASI Technology in Healthcare — Fall 2026
+description: Course hub for the Stanford SASI Technology in Healthcare Fall 2026 Internship
+remote_theme: just-the-docs/just-the-docs
+plugins:
+  - jekyll-remote-theme
+search_enabled: true
+heading_anchors: true
+# Set these after creating the repo:
+# url: https://<account>.github.io
+# baseurl: /sasi-tih-2026
+aux_links:
+  "Course Slack":
+    - "[SLACK INVITE LINK]"
+footer_content: "SASI · Technology in Healthcare · Fall 2026 — always the latest version. Check the changelog."
