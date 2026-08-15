@@ -17,7 +17,7 @@ Pages, and you have a live site. Everything is Markdown; the theme handles desig
    security rules below.
 2. Copy these files in, commit, push.
 3. Repo → Settings → Pages → Source: `main` branch, root folder. Save.
-4. Site appears at `https://<account>.github.io/sasi-tih-2026/` within a few minutes.
+4. Site appears at `https://stanfordaimlab.github.io/sasi-tih-2026/` within a few minutes.
 5. Edit `_config.yml`: set `url` and `baseurl` to match.
 
 The theme is [Just the Docs](https://just-the-docs.com) loaded via `remote_theme` —

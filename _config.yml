@@ -6,7 +6,7 @@ plugins:
 search_enabled: true
 heading_anchors: true
 # Set these after creating the repo:
-url: https://<account>.github.io
+url: https://stanfordaimlab.github.io
 baseurl: /sasi-tih-2026
 aux_links:
   "Course Slack":
