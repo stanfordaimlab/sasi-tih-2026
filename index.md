@@ -19,7 +19,7 @@ message, newer wins — and the [changelog](changelog.html) shows what changed.
 |---|------|-----------|---------|--------|
 | 1 | Sat Oct 3 | 12:00–2:00 PM | [From Hype to Evidence](sessions/session-1.html) | On schedule |
 | 2 | Sat Oct 10 | 12:00–2:00 PM | [Inside the Operating Room](sessions/session-2.html) | On schedule |
-| 3 | Sat Oct 24 | 12:00–2:00 PM | [Your Health Data Is Worth Billions](sessions/session-3.html) | On schedule |
+| 3 | Sat Oct 24 | 12:00–2:00 PM | [Your Data in the Age of AI](sessions/session-3.html) | On schedule |
 | — | Sat Oct 31 | 12:00–1:00 PM | [Optional Lab](sessions/lab.html) | Optional |
 | 4 | Sat Nov 14 | 12:00–2:00 PM | [Human-AI Futures](sessions/session-4.html) | On schedule |
 

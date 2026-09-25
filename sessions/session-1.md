@@ -14,11 +14,11 @@ caught your grandmother's heart condition. *Should you believe them — and how 
 
 | Time (PT) | What |
 |---|---|
-| 12:00 | Welcome & orientation |
-| 12:10 | **How we actually test medical technology** — Dara Rouholiman, SASI faculty. N-of-1 vs. population-based study designs: what each can and cannot prove. Includes a live evaluation activity. |
-| ~1:00 | Break |
-| 1:05 | **Faculty guest session** — [NAME + APPROVED BIO WHEN CONFIRMED — DARA] |
-| 1:50 | Wrap-up & preview of Session 2 |
+| 12:00 | Welcome & orientation — Dr. Chu + MIR team *(runs to 12:15 on day one)* |
+| 12:15 | **Testing technology in healthcare** — Dara Rouholiman, SASI faculty, + MIR team. N-of-1 vs. population-based study designs: what each can and cannot prove. 20-min lecture + 20-min group activity. |
+| 12:55 | Break (10 min) |
+| 1:05 | **From lab to regulator to user** — Robin Diane Goldstein. ~30-min talk + 15-min Q&A. |
+| 1:50 | Wrap-up & preview of Session 2 — survey + homework reminder |
 
 ## Before this session
 

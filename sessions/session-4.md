@@ -13,8 +13,16 @@ nav_order: 4
 
 | Time (PT) | What |
 |---|---|
-| 12:00 | Welcome & orientation |
-| 12:10 | **Closing keynote** — [NAME + APPROVED BIO WHEN CONFIRMED — DARA] |
-| ~1:00 | Break |
-| 1:05 | **Closing activity** — taking a health-AI product apart, claim by claim, using everything from the season. |
-| 1:50 | Closing & certificates |
+| 12:00 | Welcome & orientation — Dr. Chu + MIR team |
+| 12:10 | **Keynote: human-AI interaction** — Pat Pataranutaporn, PhD, MIT Media Lab. ~30-min talk + 15-min Q&A. |
+| 12:55 | Break (10 min) |
+| 1:05 | **Closing activity: founder scenarios** — Sandro Luna, MD MBA, + SASI team. You're the founder: pick an evaluation and validation route for a health-AI product under a real budget and timeline, using everything from the season. |
+| 1:50 | Closing & certificates — final survey |
+
+## Before this session
+
+Readings with guiding questions: see [Readings → Session 4](../readings.html#session-4).
+
+## After this session
+
+- Final survey: posted in Slack — required for your certificate.

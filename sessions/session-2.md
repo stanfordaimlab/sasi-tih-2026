@@ -13,11 +13,11 @@ nav_order: 2
 
 | Time (PT) | What |
 |---|---|
-| 12:00 | Welcome & orientation |
-| 12:10 | **Perioperative intelligence** — [NAME + APPROVED BIO WHEN CONFIRMED — DARA]. The monitors, sensors, and wearables that keep patients safe while they sleep. |
-| ~1:00 | Break |
-| 1:05 | **Robots and the spine** — Dr. Corinna Zygourakis, Stanford robotic spine surgeon. The other side of the drape, where a robot helps place screws millimeters from the spinal cord. |
-| 1:50 | Wrap-up & preview of Session 3 |
+| 12:00 | Welcome & orientation — Dr. Chu + MIR team |
+| 12:10 | **Perioperative intelligence** — speaker to be announced. The monitors, sensors, and wearables that keep patients safe while they sleep. |
+| 12:55 | Break (10 min) |
+| 1:05 | **The surgeon's view: robotic spine surgery** — Corinna Zygourakis, MD, Stanford robotic spine surgeon. The other side of the drape, where a robot helps place screws millimeters from the spinal cord. |
+| 1:50 | Wrap-up & preview of Session 3 — survey + homework reminder |
 
 ## Before this session
 

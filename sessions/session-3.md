@@ -1,11 +1,11 @@
 ---
-title: "S3 · Oct 24 — Your Health Data"
+title: "S3 · Oct 24 — Your Data in the Age of AI"
 parent: Sessions
 nav_order: 3
 ---
 
 # Session 3 · Sat Oct 24 · 12:00–2:00 PM PT
-## Your Health Data Is Worth Billions. Who Actually Owns It?
+## Your Data in the Age of AI
 
 **The big question:** your records, your DNA test, your smartwatch stream are worth
 billions — *why does none of that value flow to you, and should it?*
@@ -15,8 +15,14 @@ just hear the debate — you'll take a position, build something, and defend it.
 
 ## Rundown
 
-[FULL RUNDOWN WHEN WORKSHOP FORMAT IS LOCKED — DARA. Placeholder: workshop runs across
-both segments with facilitators and respondents; names added as confirmed.]
+| Time (PT) | What |
+|---|---|
+| 12:00 | Welcome & orientation — Dr. Chu + MIR team |
+| 12:10 | **Ignite talks** — Hugo Campos and Liz Salmi, 5 min each. |
+| ~12:20 | **Design workshop, part 1** — led by Nick Dawson & Monika Wittig. |
+| 12:55 | Break (10 min) |
+| 1:05 | **Design workshop, part 2** — led by Nick Dawson & Monika Wittig, with Hugo Campos and Liz Salmi as respondents. |
+| 1:50 | Wrap-up & preview of Session 4 — survey + homework reminder |
 
 ## Before / after
 
