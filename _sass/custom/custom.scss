@@ -1,0 +1,354 @@
+// Custom styles for the SASI Technology in Healthcare hub.
+// Colors mirror the Fall 2026 master schedule PDF (Stanford Cardinal headers,
+// warm stone neutrals, green/amber/grey status legend).
+
+$cardinal: #8c1515 !default;
+$cardinal-dark: #6f1010 !default;
+$stanford-black: #2e2d29 !default;
+$cool-grey: #53565a !default;
+$stone-light: #f4f1ec !default;
+$stone-lighter: #faf8f5 !default;
+$rule: #e2ddd5 !default;
+
+$status-confirmed-bg: #e3eedf;
+$status-confirmed-fg: #175e54;
+$status-invited-bg: #f7ebd2;
+$status-invited-fg: #7a4f00;
+$status-open-bg: #eeebe6;
+$status-open-fg: $cool-grey;
+
+// ---------------------------------------------------------------------------
+// Chrome: cardinal bar, sidebar, header, footer
+// ---------------------------------------------------------------------------
+
+body {
+  border-top: 5px solid $cardinal;
+  -webkit-font-smoothing: antialiased;
+}
+
+.side-bar {
+  border-right: 1px solid $rule;
+}
+
+.site-title {
+  color: $cardinal !important;
+  font-weight: 700;
+  font-size: 1.05rem !important;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.site-header {
+  border-bottom: 1px solid $rule;
+}
+
+.main-header {
+  border-bottom: 1px solid $rule;
+}
+
+.nav-list .nav-list-item .nav-list-link {
+  border-radius: 4px;
+
+  &:hover {
+    background-image: none;
+    background-color: rgba($cardinal, 0.06);
+    color: $cardinal;
+  }
+
+  &.active {
+    background-image: none;
+    background-color: rgba($cardinal, 0.1);
+    color: $cardinal;
+    font-weight: 600;
+  }
+}
+
+.aux-nav .aux-nav-list-item a,
+.aux-nav .site-button {
+  color: $cardinal;
+  font-weight: 600;
+}
+
+.site-footer {
+  color: $cool-grey;
+  border-top: 1px solid $rule;
+  padding-top: 1rem;
+}
+
+// ---------------------------------------------------------------------------
+// Typography
+// ---------------------------------------------------------------------------
+
+.main-content {
+  h1,
+  h2,
+  h3 {
+    letter-spacing: -0.015em;
+  }
+
+  h1 {
+    font-weight: 700;
+  }
+
+  h2 {
+    font-weight: 700;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid $rule;
+  }
+
+  a:not(.btn) {
+    text-decoration: none;
+    background-image: none;
+    border-bottom: 1px solid rgba($cardinal, 0.35);
+
+    &:hover {
+      border-bottom-color: $cardinal;
+    }
+  }
+
+  // Heading anchor links shouldn't get the underline treatment.
+  .anchor-heading {
+    border-bottom: 0 !important;
+  }
+
+  hr {
+    background-color: $rule;
+  }
+
+  blockquote {
+    border-left: 4px solid $cardinal;
+    background: $stone-lighter;
+    padding: 0.75rem 1rem;
+    margin-left: 0;
+    border-radius: 0 4px 4px 0;
+  }
+}
+
+// Small uppercase monospace label, like the PDF's "SASI · TECHNOLOGY IN HEALTHCARE".
+.eyebrow {
+  font-family: $mono-font-family;
+  font-size: 0.78rem !important;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $cardinal;
+  margin-bottom: 0.25rem !important;
+}
+
+.subtitle {
+  font-size: 1.25rem !important;
+  font-weight: 300;
+  color: $cool-grey;
+  margin-top: 0 !important;
+}
+
+// ---------------------------------------------------------------------------
+// Tables — cardinal header row + monospace time column, as in the PDF
+// ---------------------------------------------------------------------------
+
+.table-wrapper {
+  border: 1px solid $rule;
+  border-radius: 6px;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.main-content table {
+  th {
+    background-color: $cardinal;
+    color: #fff;
+    font-family: $mono-font-family;
+    font-size: 0.75rem !important;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-bottom: 0;
+  }
+
+  td {
+    border-bottom: 1px solid $rule;
+    vertical-align: top;
+  }
+
+  tr:nth-child(even) td {
+    background-color: $stone-lighter;
+  }
+
+  td:first-child {
+    font-family: $mono-font-family;
+    font-size: 0.85rem !important;
+    font-weight: 600;
+    color: $cardinal;
+    white-space: nowrap;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Status pills — the PDF legend
+// ---------------------------------------------------------------------------
+
+.status {
+  display: inline-block;
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+
+  &::before {
+    content: "●";
+    margin-right: 0.3rem;
+    font-size: 0.6rem;
+    vertical-align: 0.1em;
+  }
+}
+
+.status-confirmed {
+  background: $status-confirmed-bg;
+  color: $status-confirmed-fg;
+}
+
+.status-invited {
+  background: $status-invited-bg;
+  color: $status-invited-fg;
+}
+
+.status-open {
+  background: $status-open-bg;
+  color: $status-open-fg;
+}
+
+// ---------------------------------------------------------------------------
+// Home page hero
+// ---------------------------------------------------------------------------
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  background: $cardinal;
+  color: #fff;
+}
+
+.hero-text {
+  flex: 1 1 22rem;
+  padding: 2.25rem 2rem;
+
+  .eyebrow {
+    color: rgba(#fff, 0.8);
+  }
+
+  h1 {
+    color: #fff;
+    font-size: 2.4rem !important;
+    line-height: 1.1;
+    margin: 0.25rem 0 0.75rem;
+    border: 0;
+  }
+
+  p {
+    color: rgba(#fff, 0.92);
+  }
+
+  .hero-lede {
+    font-size: 1.2rem !important;
+    font-weight: 300;
+    line-height: 1.45;
+  }
+
+  .hero-meta {
+    font-family: $mono-font-family;
+    font-size: 0.8rem !important;
+    letter-spacing: 0.04em;
+    color: rgba(#fff, 0.75);
+    margin-top: 1.25rem;
+  }
+
+  .btn {
+    margin: 1rem 0.5rem 0 0;
+  }
+
+  .btn-hero {
+    background: #fff;
+    color: $cardinal;
+    font-weight: 600;
+    box-shadow: none;
+    border: 0 !important;
+
+    &:hover {
+      background: $stone-light;
+      color: $cardinal-dark;
+    }
+  }
+
+  .btn-hero-outline {
+    background: transparent;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: inset 0 0 0 1px rgba(#fff, 0.6);
+    border: 0 !important;
+
+    &:hover {
+      background: rgba(#fff, 0.1);
+      color: #fff;
+    }
+  }
+}
+
+.hero-photo {
+  flex: 1 1 18rem;
+  min-height: 16rem;
+  background-size: cover;
+  background-position: center;
+}
+
+// ---------------------------------------------------------------------------
+// Callouts and cards
+// ---------------------------------------------------------------------------
+
+.callout {
+  border-left: 4px solid $cardinal;
+  background: $stone-light;
+  padding: 0.85rem 1.1rem;
+  border-radius: 0 6px 6px 0;
+}
+
+.big-question {
+  border-left: 4px solid $cardinal;
+  background: $stone-light;
+  padding: 1rem 1.25rem;
+  border-radius: 0 6px 6px 0;
+  font-size: 1.1rem !important;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+.card {
+  border: 1px solid $rule;
+  border-top: 3px solid $cardinal;
+  border-radius: 6px;
+  padding: 1rem 1.1rem;
+  background: #fff;
+
+  .card-label {
+    font-family: $mono-font-family;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $cardinal;
+    margin: 0 0 0.35rem;
+  }
+
+  .card-body {
+    margin: 0;
+    color: $stanford-black;
+  }
+}

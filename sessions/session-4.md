@@ -4,10 +4,16 @@ parent: Sessions
 nav_order: 4
 ---
 
-# Session 4 · Sat Nov 14 · 12:00–2:00 PM PT
-## Human-AI Futures: Technology That Makes Us More Human
+Session 4 · Sat Nov 14 · 12:00–2:00 PM PT
+{: .eyebrow }
+
+# Human-AI Futures
+
+Technology that makes us more human
+{: .subtitle }
 
 **The big question:** AI already writes, sees, and speaks — *what should it do to us?*
+{: .big-question }
 
 ## Rundown
 

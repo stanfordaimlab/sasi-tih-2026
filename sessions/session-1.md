@@ -4,11 +4,17 @@ parent: Sessions
 nav_order: 1
 ---
 
-# Session 1 · Sat Oct 3 · 12:00–2:00 PM PT
-## From Hype to Evidence: How Health Technology Earns Trust
+Session 1 · Sat Oct 3 · 12:00–2:00 PM PT
+{: .eyebrow }
+
+# From Hype to Evidence
+
+How health technology earns trust
+{: .subtitle }
 
 **The big question:** a new app claims it detects skin cancer; a smartwatch says it
 caught your grandmother's heart condition. *Should you believe them — and how would you know?*
+{: .big-question }
 
 ## Rundown
 

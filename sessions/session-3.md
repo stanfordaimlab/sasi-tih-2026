@@ -4,11 +4,17 @@ parent: Sessions
 nav_order: 3
 ---
 
-# Session 3 · Sat Oct 24 · 12:00–2:00 PM PT
-## Your Data in the Age of AI
+Session 3 · Sat Oct 24 · 12:00–2:00 PM PT
+{: .eyebrow }
+
+# Your Data in the Age of AI
+
+Your health data is worth billions. Who actually owns it?
+{: .subtitle }
 
 **The big question:** your records, your DNA test, your smartwatch stream are worth
 billions — *why does none of that value flow to you, and should it?*
+{: .big-question }
 
 Our most hands-on session: a live design workshop on health data ownership. You won't
 just hear the debate — you'll take a position, build something, and defend it.

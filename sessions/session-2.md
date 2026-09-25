@@ -4,10 +4,16 @@ parent: Sessions
 nav_order: 2
 ---
 
-# Session 2 · Sat Oct 10 · 12:00–2:00 PM PT
-## Inside the Operating Room: The Anesthesiologist and the Surgeon
+Session 2 · Sat Oct 10 · 12:00–2:00 PM PT
+{: .eyebrow }
+
+# Inside the Operating Room
+
+The anesthesiologist and the surgeon
+{: .subtitle }
 
 **The big question:** two experts, one room, dozens of machines — *who trusts what, and why?*
+{: .big-question }
 
 ## Rundown
 

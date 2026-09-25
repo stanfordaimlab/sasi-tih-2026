@@ -59,6 +59,14 @@ sites. Our posture, same as last year's Miro board:
 | `readings.md` | Reading cards: orientation blurb + guiding question + link. Copyright rules live here |
 | `faq.md` | Corrected FAQ (it's a Fall internship — last year's doc said "Summer" throughout) |
 | `changelog.md` | Every student-visible change, newest first |
+| `_sass/color_schemes/stanford.scss` | Colors + fonts (Stanford Cardinal, stone neutrals — matches the master schedule PDF) |
+| `_sass/custom/custom.scss` | Layout styling: hero, cardinal table headers, status pills, cards |
+| `_includes/head_custom.html` | Loads Source Sans 3 / Source Code Pro from Google Fonts |
+
+**Styling helpers you can use in any page:** add `{: .eyebrow }`, `{: .subtitle }`,
+`{: .callout }`, or `{: .big-question }` on the line after a paragraph; use
+`<span class="status status-confirmed|status-invited|status-open">Label</span>` for
+the green / amber / grey pills from the PDF legend.
 
 ## Placeholders
 

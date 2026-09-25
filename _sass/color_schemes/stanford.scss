@@ -1,0 +1,27 @@
+// Stanford color scheme — matches the Fall 2026 master schedule PDF.
+// Palette: https://identity.stanford.edu/design-elements/color/
+
+$cardinal: #8c1515;
+$cardinal-dark: #6f1010;
+$cardinal-bright: #b1040e;
+$stanford-black: #2e2d29;
+$cool-grey: #53565a;
+$stone-light: #f4f1ec;
+$stone-lighter: #faf8f5;
+$rule: #e2ddd5;
+
+$body-font-family: "Source Sans 3", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+$mono-font-family: "Source Code Pro", SFMono-Regular, Menlo, Consolas, monospace;
+
+$body-background-color: #ffffff;
+$sidebar-color: $stone-light;
+$body-heading-color: $stanford-black;
+$body-text-color: $stanford-black;
+$nav-child-link-color: $cool-grey;
+$search-result-preview-color: $cool-grey;
+$link-color: $cardinal;
+$btn-primary-color: $cardinal;
+$border-color: $rule;
+$table-background-color: #ffffff;
+$code-background-color: $stone-lighter;
+$feedback-color: darken($stone-light, 3%);
