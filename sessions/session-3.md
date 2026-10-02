@@ -30,7 +30,23 @@ just hear the debate — you'll take a position, build something, and defend it.
 | 1:05 | **Design workshop, part 2** — led by Nick Dawson & Monika Wittig, with Hugo Campos and Liz Salmi as respondents. |
 | 1:50 | Wrap-up & preview of Session 4 — survey + homework reminder |
 
-## Before / after
+## Before this session: try to get your own health data
 
-- Readings: see [Readings → Session 3](../readings.html#session-3)
-- Homework + survey: posted in Slack.
+Before Oct 24, try to access some or all of your own health data. Go as far as you like:
+
+- **Your doctor's patient portal** (e.g., MyChart): visit notes, lab results, immunizations,
+  or a full download of your record
+- **Your phone's health app** (e.g., Apple Health, Google Health Connect, Samsung Health)
+  or a wearable's app: what does it collect about you, and can you export it?
+- **Lab or testing companies** you've used, or a formal request to a clinic for your records
+
+You don't need to bring anything to the session, and **please don't share any of your actual
+health information** with us, in the workbook, or in Slack. We only want to hear about the
+process: what you tried, what you got, and what got in the way.
+
+No doctor's office or portal? Explore what your phone or a fitness app records about you
+instead. Under 18? A parent or guardian may need to grant you proxy access to a portal.
+
+Then answer the Session 3 questions in on SLACK. In the workshop, you'll hear from
+people who have fought for access to their own data, and you'll design ways to fix what
+you ran into.
