@@ -20,17 +20,9 @@ Every Saturday session follows the same shape:
 ## Between sessions
 
 Each session has short assigned readings with guiding questions — see
-[Readings](readings.html) — and a post-session survey posted in Slack.
+[Readings](readings.html) — and a post-session survey via email from Qualtrics!
 **Completing every survey is required for your certificate.**
 
-## Getting the most from a speaker
-
-Our faculty guests are people you could not otherwise reach. Three habits:
-
-1. **Come with one question written down.** The workbook has a box for it.
-2. **Be skeptical on paper.** Note one claim you doubt — that's the skill this course teaches.
-3. **Didn't get to ask?** Post your question in Slack after the session; the teaching
-   team relays questions to speakers by email.
 
 ## If you have to miss a session
 

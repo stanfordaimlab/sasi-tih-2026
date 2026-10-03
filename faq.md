@@ -16,7 +16,7 @@ The two-hour Saturday session plus roughly 1–2 hours of readings, homework, an
 survey. The optional lab adds one hour.
 
 **Will there be homework?**
-Yes — short readings with guiding questions and a brief assignment. Details on each
+Yes — short readings with guiding questions. Details on each
 session page and in Slack.
 
 **How do I interact with speakers?**
