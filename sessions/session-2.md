@@ -20,7 +20,7 @@ The anesthesiologist and the surgeon
 | Time (PT) | What |
 |---|---|
 | 12:00 | Welcome & orientation — Dr. Chu + MIR team |
-| 12:10 | **Perioperative intelligence** — speaker to be announced. The monitors, sensors, and wearables that keep patients safe while they sleep. |
+| 12:10 | **Perioperative intelligence** — Roya Saffary, MD/MBA. The monitors, sensors, and wearables that keep patients safe while they sleep. |
 | 12:55 | Break (10 min) |
 | 1:05 | **The surgeon's view: robotic spine surgery** — Corinna Zygourakis, MD, Stanford robotic spine surgeon. The other side of the drape, where a robot helps place screws millimeters from the spinal cord. |
 | 1:50 | Wrap-up & preview of Session 3 — survey + homework reminder |
@@ -31,5 +31,5 @@ Readings with guiding questions: see [Readings → Session 2](../readings.html#s
 
 ## After this session
 
-- Homework: [HW PROMPT + LINK — DARA]
-- Survey: posted in Slack after the session — required for your certificate.
+- Homework: See Slack Channel for Session 3. 
+- Survey: Qualtrics — required for your certificate.

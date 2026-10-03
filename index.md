@@ -24,7 +24,7 @@ message, newer wins — and the [changelog](changelog.html) shows what changed.
 | Date | Session | Featuring | Status |
 |------|---------|-----------|--------|
 | Sat Oct 3 | [**From Hype to Evidence**](sessions/session-1.html)<br>Session 1 · 12:00–2:00 PM | Dara Rouholiman · Robin Diane Goldstein | <span class="status status-confirmed">On schedule</span> |
-| Sat Oct 10 | [**Inside the Operating Room**](sessions/session-2.html)<br>Session 2 · 12:00–2:00 PM | Corinna Zygourakis, MD · guest TBA | <span class="status status-confirmed">On schedule</span> |
+| Sat Oct 10 | [**Inside the Operating Room**](sessions/session-2.html)<br>Session 2 · 12:00–2:00 PM | Roya Saffary, MD/MBA · Corinna Zygourakis, MD | <span class="status status-confirmed">On schedule</span> |
 | Sat Oct 24 | [**Your Data in the Age of AI**](sessions/session-3.html)<br>Session 3 · 12:00–2:00 PM | Hugo Campos · Liz Salmi · Nick Dawson · Monika Wittig | <span class="status status-confirmed">On schedule</span> |
 | Sat Oct 31 | [**Optional Lab**](sessions/lab.html)<br>12:00–1:00 PM | SASI team | <span class="status status-open">Optional</span> |
 | Sat Nov 14 | [**Human-AI Futures**](sessions/session-4.html)<br>Session 4 · 12:00–2:00 PM | Pat Pataranutaporn, PhD · Sandro Luna, MD MBA | <span class="status status-confirmed">On schedule</span> |
@@ -36,16 +36,12 @@ this site.**
 
 <div class="card-grid">
   <div class="card">
-    <p class="card-label">📓 Workbook</p>
-    <p class="card-body">[WORKBOOK LINK — released before Session 1]</p>
-  </div>
-  <div class="card">
     <p class="card-label">💬 Slack</p>
-    <p class="card-body">[SLACK INVITE LINK]</p>
+    <p class="card-body">Please check your email and let us know if you're having any difficulties</p>
   </div>
   <div class="card">
     <p class="card-label">📋 Weekly surveys</p>
-    <p class="card-body">Posted in Slack after each session. All four are required for your certificate.</p>
+    <p class="card-body">Emailed after each session. All four are required for your certificate.</p>
   </div>
   <div class="card">
     <p class="card-label">✉️ Missing a session?</p>

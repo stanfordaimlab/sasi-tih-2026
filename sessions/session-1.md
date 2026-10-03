@@ -24,7 +24,7 @@ caught your grandmother's heart condition. *Should you believe them — and how 
 | 12:15 | **Testing technology in healthcare** — Dara Rouholiman, SASI faculty, + MIR team. N-of-1 vs. population-based study designs: what each can and cannot prove. 20-min lecture + 20-min group activity. |
 | 12:55 | Break (10 min) |
 | 1:05 | **From lab to regulator to user** — Robin Diane Goldstein. ~30-min talk + 15-min Q&A. |
-| 1:50 | Wrap-up & preview of Session 2 — survey + homework reminder |
+| 1:50 | Wrap-up & preview of Session 2 — survey and reading reminder |
 
 ## Before this session
 
@@ -32,5 +32,5 @@ Readings with guiding questions: see [Readings → Session 1](../readings.html#s
 
 ## After this session
 
-- Homework: [HW PROMPT + LINK — DARA]
-- Survey: posted in Slack after the session — required for your certificate.
+- HW: Readings and videos for Session 2
+- Survey: Qualtrics for EACH activity — required for your certificate.
