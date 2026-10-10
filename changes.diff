@@ -1,0 +1,66 @@
+diff --git a/changelog.md b/changelog.md
+index f9b6041..e39ba3d 100644
+--- a/changelog.md
++++ b/changelog.md
+@@ -10,4 +10,7 @@ something changed — this is the page.
+ 
+ | Date | Change |
+ |---|---|
++| Oct 9 | **Session 3:** pre-session activity now goes on the Session 3 Miro board instead of Slack. Link is in [Before this session](sessions/session-3.html#before-this-session-try-to-get-your-own-health-data). |
++| Oct 9 | **Session 2:** Bassam Kadry, MD joins Roya Saffary for the first hour. Added to the session page and home schedule. |
++| Oct 2 | **Session 3:** added the pre-session activity, "try to get your own health data." |
+ | [DATE] | Hub launched (v1.0). |
+diff --git a/index.md b/index.md
+index 8d546a8..9ce625c 100644
+--- a/index.md
++++ b/index.md
+@@ -24,7 +24,7 @@ message, newer wins — and the [changelog](changelog.html) shows what changed.
+ | Date | Session | Featuring | Status |
+ |------|---------|-----------|--------|
+ | Sat Oct 3 | [**From Hype to Evidence**](sessions/session-1.html)<br>Session 1 · 12:00–2:00 PM | Dara Rouholiman · Robin Diane Goldstein | <span class="status status-confirmed">On schedule</span> |
+-| Sat Oct 10 | [**Inside the Operating Room**](sessions/session-2.html)<br>Session 2 · 12:00–2:00 PM | Roya Saffary, MD/MBA · Corinna Zygourakis, MD | <span class="status status-confirmed">On schedule</span> |
++| Sat Oct 10 | [**Inside the Operating Room**](sessions/session-2.html)<br>Session 2 · 12:00–2:00 PM | Roya Saffary, MD/MBA · Bassam Kadry, MD · Corinna Zygourakis, MD | <span class="status status-confirmed">On schedule</span> |
+ | Sat Oct 24 | [**Your Data in the Age of AI**](sessions/session-3.html)<br>Session 3 · 12:00–2:00 PM | Hugo Campos · Liz Salmi · Nick Dawson · Monika Wittig | <span class="status status-confirmed">On schedule</span> |
+ | Sat Oct 31 | [**Optional Lab**](sessions/lab.html)<br>12:00–1:00 PM | SASI team | <span class="status status-open">Optional</span> |
+ | Sat Nov 14 | [**Human-AI Futures**](sessions/session-4.html)<br>Session 4 · 12:00–2:00 PM | Pat Pataranutaporn, PhD · Sandro Luna, MD MBA | <span class="status status-confirmed">On schedule</span> |
+diff --git a/sessions/session-2.md b/sessions/session-2.md
+index 40e9954..21bd22a 100644
+--- a/sessions/session-2.md
++++ b/sessions/session-2.md
+@@ -20,7 +20,7 @@ The anesthesiologist and the surgeon
+ | Time (PT) | What |
+ |---|---|
+ | 12:00 | Welcome & orientation — Dr. Chu + MIR team |
+-| 12:10 | **Perioperative intelligence** — Roya Saffary, MD/MBA. The monitors, sensors, and wearables that keep patients safe while they sleep. |
++| 12:10 | **Perioperative intelligence** — Roya Saffary, MD/MBA, with Bassam Kadry, MD. The monitors, sensors, and wearables that keep patients safe while they sleep. |
+ | 12:55 | Break (10 min) |
+ | 1:05 | **The surgeon's view: robotic spine surgery** — Corinna Zygourakis, MD, Stanford robotic spine surgeon. The other side of the drape, where a robot helps place screws millimeters from the spinal cord. |
+ | 1:50 | Wrap-up & preview of Session 3 — survey + homework reminder |
+@@ -31,5 +31,5 @@ Readings with guiding questions: see [Readings → Session 2](../readings.html#s
+ 
+ ## After this session
+ 
+-- Homework: See Slack Channel for Session 3. 
++- Homework: try to get your own health data, then complete the pre-session exercise on the Session 3 Miro board. Details: [Session 3 → Before this session](session-3.html#before-this-session-try-to-get-your-own-health-data).
+ - Survey: Qualtrics — required for your certificate.
+diff --git a/sessions/session-3.md b/sessions/session-3.md
+index 1f05750..ab51707 100644
+--- a/sessions/session-3.md
++++ b/sessions/session-3.md
+@@ -41,12 +41,12 @@ Before Oct 24, try to access some or all of your own health data. Go as far as y
+ - **Lab or testing companies** you've used, or a formal request to a clinic for your records
+ 
+ You don't need to bring anything to the session, and **please don't share any of your actual
+-health information** with us, in the workbook, or in Slack. We only want to hear about the
++health information** with us, on the Miro board, or in Slack. We only want to hear about the
+ process: what you tried, what you got, and what got in the way.
+ 
+ No doctor's office or portal? Explore what your phone or a fitness app records about you
+ instead. Under 18? A parent or guardian may need to grant you proxy access to a portal.
+ 
+-Then answer the Session 3 questions in on SLACK. In the workshop, you'll hear from
+-people who have fought for access to their own data, and you'll design ways to fix what
+-you ran into.
++Then complete the pre-session exercise on the [**Session 3 Miro board**](https://miro.com/app/board/uXjVHr1xKnQ=/?moveToViewport=-24803%2C-21688%2C15867%2C8230){:target="_blank"}.
++In the workshop, you'll hear from people who have fought for access to their own data, and
++you'll design ways to fix what you ran into.
