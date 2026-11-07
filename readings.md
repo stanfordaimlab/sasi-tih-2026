@@ -119,6 +119,34 @@ in every session that follows.
 
 ## Session 4
 
-**Coming soon.** Session 4 readings are still being finalized and will be posted here
-before Nov 14. We'll announce them in Slack when they're up.
-{: .callout }
+### 📄 "Is AI in the eye of the beholder?" — Adam Zewe, *MIT News* (2023)
+- **Time / difficulty:** ~8 min · ●○○
+- **Why you're reading this:** This is the plain-language story of a study led by our
+  keynote speaker, Pat Pataranutaporn. 310 people chatted with an AI mental health companion
+  for about 30 minutes. Beforehand, one group was told it cared about them, one was told it
+  was manipulative, and one was told it had no motives at all. The chatbot itself never
+  changed. What people believed did: it shaped how trustworthy and helpful they rated it,
+  and even how they talked to it, which in turn changed how the chatbot answered back. It's
+  a reminder from Session 1 that evaluating a technology means evaluating the people using
+  it, too.
+- **Read for this question:** Everyone talked to the same chatbot, yet they rated it
+  differently. If you were testing a health chatbot, how would you tell how good the AI
+  actually is apart from what people expected it to be?
+- **Find it:** [MIT News](https://news.mit.edu/2023/ai-eye-beholder-chatbot-motives-1002)
+- **Optional, if you enjoyed it:** the original study in *Nature Machine Intelligence*,
+  free on MIT's open-access repository: [MIT DSpace](https://dspace.mit.edu/handle/1721.1/152316)
+
+### 📄 "Health Care AI, Intended To Save Money, Turns Out To Require a Lot of Expensive Humans" — Darius Tahir, *KFF Health News* (2025)
+- **Time / difficulty:** ~12 min · ●●○
+- **Why you're reading this:** In Session 1 we said evaluation isn't a checkbox. This
+  article shows why. At Penn Medicine, an algorithm that reminded doctors to talk with
+  cancer patients about end-of-life care quietly got worse during the pandemic. At Stanford,
+  checking just two AI models for fairness and reliability took months of expert work. And
+  as of this reporting, there was no agreed standard for how to keep testing an AI tool
+  once it's in use. Every check costs money and people, which is exactly the trade-off a
+  founder faces. It sets up our closing hour with Sandro Luna. It's from early 2025, so some
+  of the people quoted have changed jobs, but the problem hasn't gone away.
+- **Read for this question:** Put on the inventor's hat. Your tool worked well when you
+  tested it last year, and your budget is tight. How much would you spend proving it still
+  works this year, and what could go wrong for one patient if you skipped it?
+- **Find it:** [KFF Health News](https://kffhealthnews.org/news/article/artificial-intelligence-algorithms-software-health-care/)
