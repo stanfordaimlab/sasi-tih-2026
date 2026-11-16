@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Survey Check-In</title>
+<style>
+  :root {
+    --bg: #f6f5f2; --surface: #ffffff; --text: #1d1d1b; --muted: #6b6a66;
+    --border: #e3e1dc; --accent: #8c1515; --accent-text: #ffffff;
+    --todo-bg: #fdf1ef; --todo-fg: #9a2a1c; --done-bg: #edf6ef; --done-fg: #23663a;
+    --opt-bg: #f1f0ec; --opt-fg: #5d5b56; --track: #ebe9e4; --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #151514; --surface: #1f1f1d; --text: #efeee9; --muted: #a3a19b;
+      --border: #34332f; --accent: #e0645a; --accent-text: #151514;
+      --todo-bg: #3a201c; --todo-fg: #f3a497; --done-bg: #1b3022; --done-fg: #8fd3a3;
+      --opt-bg: #2a2a27; --opt-fg: #b9b7b0; --track: #33322e; --shadow: none;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #151514; --surface: #1f1f1d; --text: #efeee9; --muted: #a3a19b;
+    --border: #34332f; --accent: #e0645a; --accent-text: #151514;
+    --todo-bg: #3a201c; --todo-fg: #f3a497; --done-bg: #1b3022; --done-fg: #8fd3a3;
+    --opt-bg: #2a2a27; --opt-fg: #b9b7b0; --track: #33322e; --shadow: none;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    min-height: 100vh; display: flex; justify-content: center; padding: 48px 16px;
+  }
+  main { width: 100%; max-width: 520px; }
+  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); margin: 0 0 6px; }
+  h1 { font-size: 28px; line-height: 1.2; margin: 0 0 8px; }
+  .lede { color: var(--muted); margin: 0 0 28px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 24px; box-shadow: var(--shadow); }
+  label { display: block; font-weight: 600; font-size: 14px; margin-bottom: 6px; }
+  input {
+    width: 100%; font: inherit; padding: 12px 14px; border-radius: 10px; color: var(--text);
+    border: 1px solid var(--border); background: var(--bg); outline: none;
+  }
+  input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 20%, transparent); }
+  button {
+    font: inherit; font-weight: 600; cursor: pointer; border-radius: 10px; padding: 12px 16px; border: 0;
+    background: var(--accent); color: var(--accent-text); width: 100%; margin-top: 14px;
+  }
+  button.link { background: none; color: var(--muted); width: auto; padding: 0; margin: 0; font-weight: 500; text-decoration: underline; }
+  .error { color: var(--todo-fg); background: var(--todo-bg); border-radius: 10px; padding: 10px 14px; margin-top: 14px; font-size: 14px; }
+  .hint { color: var(--muted); font-size: 13px; margin: 12px 0 0; }
+  .who { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 18px; font-size: 14px; color: var(--muted); }
+  .who strong { color: var(--text); font-weight: 600; overflow-wrap: anywhere; }
+  .summary { font-size: 22px; font-weight: 700; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 14px; font-size: 15px; }
+  .bar { height: 8px; background: var(--track); border-radius: 99px; overflow: hidden; margin-bottom: 24px; }
+  .bar > span { display: block; height: 100%; background: var(--done-fg); border-radius: 99px; transition: width .4s ease; }
+  h2 { font-size: 13px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin: 22px 0 8px; font-weight: 600; }
+  ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+  li { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--border); }
+  .pill { font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 99px; white-space: nowrap; }
+  .todo .pill { background: var(--todo-bg); color: var(--todo-fg); }
+  .done .pill { background: var(--done-bg); color: var(--done-fg); }
+  .opt .pill { background: var(--opt-bg); color: var(--opt-fg); }
+  .done { color: var(--muted); }
+  .allset { background: var(--done-bg); color: var(--done-fg); border-radius: 10px; padding: 14px; font-weight: 600; }
+  footer { color: var(--muted); font-size: 12px; text-align: center; margin-top: 18px; }
+  .back { display: inline-block; margin: 0 0 20px; font-size: 14px; color: var(--muted); text-decoration: none; }
+  .back:hover { color: var(--accent); text-decoration: underline; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="../">← Back to course hub</a>
+  <p class="eyebrow">2026 Fall Tech</p>
+  <h1>Survey check-in</h1>
+  <p class="lede">Enter the email your survey invitations were sent to and you'll see which surveys you still need to complete.</p>
+
+  <section class="card" id="login">
+    <form id="form" autocomplete="on">
+      <label for="email">Email address</label>
+      <input id="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required>
+      <button type="submit">View my surveys</button>
+      <div class="error" id="err" hidden></div>
+    </form>
+  </section>
+
+  <section class="card" id="result" hidden>
+    <div class="who"><span>Signed in as <strong id="who"></strong></span><button class="link" id="out" type="button">Sign out</button></div>
+    <p class="summary" id="summary"></p>
+    <p class="sub" id="sub"></p>
+    <div class="bar"><span id="bar" style="width:0"></span></div>
+    <div id="lists"></div>
+  </section>
+
+  <footer id="updated"></footer>
+</main>
+
+<script>
+const DATA = {"updated":"2026-11-16","surveys":[{"label":"Oct 3 \u00b7 Session A","optional":false},{"label":"Oct 3 \u00b7 Session B","optional":false},{"label":"Oct 10 \u00b7 Session A","optional":false},{"label":"Oct 10 \u00b7 Session B","optional":false},{"label":"Oct 24 \u00b7 Session A","optional":false},{"label":"Oct 24 \u00b7 Session B","optional":false},{"label":"Optional Session 1 (Oct 31)","optional":true},{"label":"Nov 14 \u00b7 Session A","optional":false},{"label":"Nov 14 \u00b7 Session B","optional":false},{"label":"Final Course Evaluation","optional":false}],"students":{"64ac02536b8662699c951d5bb6ab6a1bd14216cb1617a0c343f0e87ae25f9b92":[0,1,3,4,5],"4b541e59281252a177f54389183dbee6387c099103f8c4c4f2fc56f69bb8900f":[0,1,2,3,4,5,7,8,9],"1d8675e3b3dfc0f2ec9fb530538482cace4b077ab4b50072381a2e1bcd4ddddb":[1,3],"274929f902fabc04dd516fad7fba1291e892916c5745c468178f9d17844a791b":[2,3,4,5,7],"ba0b87fc7c475df7ffeae10ec118b3c91061fc8bbe6b5920e4850184b7979c43":[0,1,2,3,4,5,7,8,9],"f680c4365758a5eeed1bcc1df7c9bf4232fd053376035cb59e8134229de4c6b9":[0,5],"8ffe130f618a5cfc334702507cf2fcb2de121817cfa44aae24c56027853ed411":[0,2,3,7,8,9],"654fc897b9bd5ee948a98ac08390926c9f1e1966eee91309ac9e67acd9d7fef0":[0,1,2,3,4,5,6,7,8,9],"4d372a865d0b684fd40f60d1ea865057ae093208dbcc1bccada15941d670ea61":[0,1,2,3,4,5,6,7,8,9],"a85c77834e95a0163c4de5691f6ef234ee08cef381d31a7f9c7df43e3c4a5a54":[0,1,2,3,4,5,6,7,8,9],"4a88049f25d1b76fa22a3bda11c3f898685dbdb01d036653f12dc86b28319253":[0,1,2,3,4,5,6,7,8,9],"de475d52c225227cbde57e7b56f437fcc41e011caaa15dde5c97ebc79290c093":[0,1,2,3,4,5,6],"5c42f4ad81df9fda0f3813f19297dd28fe24156c0cb29b360cecf363b4438d3c":[0,1,2,3,4,5,7,8,9],"ce36fa34b7a5920f556f9b82f5c8bccb235c380763deb2b8ebe6aa9dff1fd439":[0,1,2,3,4,5,6,7,8,9],"0205e52ba6043c03093e9401efa045de6c0684da07430bee9c03c6a31d5b7dea":[0,1,2,3,4,5,6,7,8,9],"1dce308b22783cef8b5f524ae3ffd660bceb1059d8c317c0ad52d89d73a0649d":[0,1,2,3,4,5,7,8,9],"e622089d3ae273e49090f200f8af02c6beecd979a31c7f689f82492b329c44f7":[0,1,2,4,5,7,8,9],"7e68be69ed0d656ad14a85612c9fccb1faeb2adf21561156792c034ab8fab747":[0,1,2,3,4,5,8,9],"096254b8b2d5a0bf7924d13928388428b0d75f42b7e5a4cfb6a186d8c1fd3719":[2,3],"de53077c2f467e2334f6455833ac718506866c1a1ac5ae313b956e09e7fe2f00":[0,1,2,3,4,5,7,8,9],"cf9688a29b9b46e9ea4ebc7f1c398af3a32108c2ec0279ed5c8e9940815972d1":[0,1,2,3,4,5,7,8,9],"891c88ce04c6c0db6d1e8afc2df56bf87044142707a5d30372b08ef49833c2ae":[0,1,2,3,5,7,8,9],"87c9ce201d467f9b9be3e12327ef157a2c23adc4beacbac82f5a75c5eb0baad1":[0,1,2,3,4,5,7,8,9],"5da2ed0be81c4a1d00ad54f08c34605e813eaca808db9eec3cc069f872876590":[0,1,2,3,7,8,9],"40b372b8ff2e1ddf3ccfa11403f713b953b3dedc94a96cb73dd915c29b559820":[3],"50502528d9edd1c11d966df1add6303e99aa9e040ee68a7a5dc3b9895650768d":[0,1,2,3,4,5,7,8,9],"19a2d4b48cf75e5c4c568d678d77e685ea14ab0e5a500315575167dd465d5269":[0,1,2,3,4,5,7,8,9],"f9ac25d80d7ddbbc1467d15b2d813a0443beba4b8b437ceb9c1b6f055cff6896":[0,1,2,3,4,5,7,8,9],"b803f97e1853c544802a355e329ada796d7cc0833e009a7512fb2a65ef27e0c0":[0,1,2,3,4,5,7,8,9],"c154c7dea2a8d4836a6eb31838d3ed5c0a4fe33e7aed89179813981c2be34a7b":[0,1,2,3,4,5,6,7,8,9],"f71baf8a822a19797af21c965aa25e1c6daeeac7d5493295b95739a7528a0984":[0,1,2,3,4,5,7,8,9],"79588394336e5e2ae73d53d3402104246b1d570d3e2b99ebfe48e7c516f353b0":[0,1,2,3,4,5,7,9],"5dc658e101927803bb93cff90e9c4ee52420b06c07eebd34a57e734f3ff9069f":[0,1,3,5,7],"bbd4db03d36aebf8ed6e0b1790e3faf0f812a544c7eb8d888d593a221ecb1d73":[0,1,2,3,4,5,7,8,9],"b6e26ac838405d1a7f418afd08d93d48eaedceba3b1c2525e9472db703419705":[0,1,2,3,4,5,7,8,9],"536d7f4e0d320e05fd820f04d4bf4286c1f862dc56bff1c147c57c423b9a031e":[0,1,2,5,7],"4f994462522a7f498adc8e3266500ea1b7616ba1bb390de75905ef24baaf294e":[0,1,2,3,4,5,7,8,9],"858e072f0e58a35843f6712aa97b80ca3a8426fc1ca1410c5bad0d7f2e461150":[0,1,2,3,4,5,7,8,9],"0d8f8fd59e248cc09fab768f5212e0fd653664f869dacca385a6d16ca29c97d0":[0,1,2,3,4,5,6,7,8,9],"44f29a7d762d0dc44aac3425665b385ac0706506f3a27e5642e8178ca256fee8":[0,1,2,3,4,5,7,8,9]}};
+
+// SHA-256 (falls back to a pure-JS version when crypto.subtle is unavailable, e.g. plain http)
+async function sha256(str) {
+  const bytes = new TextEncoder().encode(str);
+  if (window.crypto && crypto.subtle) {
+    const buf = await crypto.subtle.digest("SHA-256", bytes);
+    return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, "0")).join("");
+  }
+  const K = [0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2];
+  const H = [0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19];
+  const l = bytes.length, n = ((l + 9 + 63) >> 6) << 6, m = new Uint8Array(n);
+  m.set(bytes); m[l] = 0x80;
+  const dv = new DataView(m.buffer); dv.setUint32(n - 4, l * 8); dv.setUint32(n - 8, Math.floor(l / 0x20000000));
+  const r = (x, k) => (x >>> k) | (x << (32 - k)), w = new Uint32Array(64);
+  for (let o = 0; o < n; o += 64) {
+    for (let i = 0; i < 16; i++) w[i] = dv.getUint32(o + i * 4);
+    for (let i = 16; i < 64; i++) {
+      const s0 = r(w[i-15],7) ^ r(w[i-15],18) ^ (w[i-15] >>> 3), s1 = r(w[i-2],17) ^ r(w[i-2],19) ^ (w[i-2] >>> 10);
+      w[i] = (w[i-16] + s0 + w[i-7] + s1) | 0;
+    }
+    let [a,b,c,d,e,f,g,h] = H;
+    for (let i = 0; i < 64; i++) {
+      const t1 = (h + (r(e,6) ^ r(e,11) ^ r(e,25)) + ((e & f) ^ (~e & g)) + K[i] + w[i]) | 0;
+      const t2 = ((r(a,2) ^ r(a,13) ^ r(a,22)) + ((a & b) ^ (a & c) ^ (b & c))) | 0;
+      h = g; g = f; f = e; e = (d + t1) | 0; d = c; c = b; b = a; a = (t1 + t2) | 0;
+    }
+    [a,b,c,d,e,f,g,h].forEach((v, i) => H[i] = (H[i] + v) | 0);
+  }
+  return H.map(v => (v >>> 0).toString(16).padStart(8, "0")).join("");
+}
+
+const $ = id => document.getElementById(id);
+const esc = s => s.replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+function fmtDate(iso) {
+  const [y, m, d] = iso.split("-").map(Number);
+  return new Date(y, m - 1, d).toLocaleDateString(undefined, { month: "long", day: "numeric", year: "numeric" });
+}
+function showError(html) { $("err").innerHTML = html; $("err").hidden = false; }
+
+if (!DATA) {
+  showError("This is the page <strong>template</strong> and contains no survey data. Run <code>python3 survey_completion.py</code> and open <strong>student_portal/index.html</strong> instead.");
+} else {
+  $("updated").textContent = "Responses last updated " + fmtDate(DATA.updated) + ". Surveys you finish after this date won't show yet.";
+}
+
+function item(label, cls, pill) {
+  return `<li class="${cls}"><span>${esc(label)}</span><span class="pill">${pill}</span></li>`;
+}
+
+function render(email, done) {
+  const doneSet = new Set(done);
+  const req = DATA.surveys.map((s, i) => ({ ...s, i })).filter(s => !s.optional);
+  const opt = DATA.surveys.map((s, i) => ({ ...s, i })).filter(s => s.optional);
+  const todo = req.filter(s => !doneSet.has(s.i)), fin = req.filter(s => doneSet.has(s.i));
+
+  $("who").textContent = email;
+  $("summary").textContent = todo.length === 0 ? "You're all caught up!" :
+    `${todo.length} survey${todo.length === 1 ? "" : "s"} left to complete`;
+  $("sub").textContent = `${fin.length} of ${req.length} required surveys completed`;
+  requestAnimationFrame(() => $("bar").style.width = (req.length ? 100 * fin.length / req.length : 100) + "%");
+
+  let html = "";
+  if (todo.length) html += `<h2>Still to complete</h2><ul>${todo.map(s => item(s.label, "todo", "Not done")).join("")}</ul>`;
+  else html += `<div class="allset">Every required survey has been received. Thank you!</div>`;
+  if (fin.length) html += `<h2>Completed</h2><ul>${fin.map(s => item(s.label, "done", "Done")).join("")}</ul>`;
+  if (opt.length) html += `<h2>Optional</h2><ul>${opt.map(s => doneSet.has(s.i) ? item(s.label, "done", "Done") : item(s.label, "opt", "Optional")).join("")}</ul>`;
+  $("lists").innerHTML = html;
+
+  $("login").hidden = true; $("result").hidden = false;
+}
+
+$("form").addEventListener("submit", async e => {
+  e.preventDefault();
+  if (!DATA) return;
+  const email = $("email").value.trim().toLowerCase();
+  $("err").hidden = true;
+  try {
+    const done = DATA.students[await sha256(email)];
+    if (!done) {
+      showError(`We couldn't find <strong>${esc(email)}</strong>. Use the exact email address your survey invitations were sent to. If you haven't submitted any surveys yet, you won't be listed here. Please contact the course team.`);
+      return;
+    }
+    render(email, done);
+  } catch (ex) {
+    showError("Something went wrong looking up your surveys (" + esc(String(ex)) + "). Please try a different browser or contact the course team.");
+  }
+});
+
+$("out").addEventListener("click", () => {
+  $("result").hidden = true; $("login").hidden = false;
+  $("email").value = ""; $("bar").style.width = "0"; $("email").focus();
+});
+</script>
+</body>
+</html>

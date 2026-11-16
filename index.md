@@ -11,6 +11,7 @@ nav_order: 1
     <p class="hero-meta">Oct 3 – Nov 14 · Saturdays 12:00–2:00 PM PT · Live on Zoom</p>
     <a href="#season-at-a-glance" class="btn btn-hero">See the schedule</a>
     <a href="{{ '/logistics.html' | relative_url }}" class="btn btn-hero-outline">How it works</a>
+    <a href="{{ '/student_survey/' | relative_url }}" class="btn btn-hero-outline">Check my surveys</a>
   </div>
   <div class="hero-photo" role="img" aria-label="Stanford Cancer Center entrance" style="background-image: url('{{ '/assets/images/hero.jpg' | relative_url }}');"></div>
 </div>
@@ -41,7 +42,7 @@ this site.**
   </div>
   <div class="card">
     <p class="card-label">📋 Weekly surveys</p>
-    <p class="card-body">Emailed after each session. All four are required for your certificate.</p>
+    <p class="card-body">Emailed after each session. All four are required for your certificate. <a href="{{ '/student_survey/' | relative_url }}">Check which you've completed →</a></p>
   </div>
   <div class="card">
     <p class="card-label">✉️ Missing a session?</p>

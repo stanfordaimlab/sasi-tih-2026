@@ -11,6 +11,12 @@ aux_links_new_tab: true
 # Set these after creating the repo:
 url: https://stanfordaimlab.github.io
 baseurl: /sasi-tih-2026
+# Sidebar entry for the standalone survey status page (student_survey/index.html).
+nav_external_links:
+  - title: Survey Status
+    url: https://stanfordaimlab.github.io/sasi-tih-2026/student_survey/
+    hide_icon: true
+    opens_in_new_tab: false
 aux_links:
   "Course Slack":
     - "[SLACK INVITE LINK]"
